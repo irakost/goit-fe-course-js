@@ -102,7 +102,7 @@ const users = [
 // const getAllNames = users.map(function(user){
 //     return user.name;
 // });
-const getAllNames = users.map((user) => user.name);
+const getAllNames = users.map(user => user.name);
 console.log(getAllNames); 
 
 // Получить массив объектов пользователей по цвету глаз (поле eyeColor)
@@ -181,12 +181,9 @@ console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree
 
 
 const getAllUniqueSkills = (arr) => arr.reduce((acc,user) => user.skills ? acc.concat(user.skills) : acc, [])
-                                       .sort();
-// console.log(getAllUniqueSkills(users));
-const allUnique = getAllUniqueSkills(users);
-const getAllSkills = array => array.filter((user, index, arr) => arr.indexOf(user) === index);
-
-console.log(getAllSkills(allUnique));
+                                       .sort()
+                                       .filter((user, index, arr) => arr.indexOf(user) === index);
+console.log(getAllUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum',
 // 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
 
