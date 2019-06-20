@@ -1,0 +1,7 @@
+.wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.content-part{
+    flex-direction: column;
+}
