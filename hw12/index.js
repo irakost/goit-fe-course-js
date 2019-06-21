@@ -29,6 +29,6 @@ function pushLink() {
 
     event.preventDefault();
     links.push(link) ;
-    
+    console.log(link)
     
 }
