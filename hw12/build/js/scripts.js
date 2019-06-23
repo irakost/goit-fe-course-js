@@ -28,7 +28,7 @@ form.addEventListener("submit", pushLink);
 let links = localStorage.getItem('links') ? localStorage.getItem('links').split(",") : [];
 compileHTML(links);
 
-function pushLink() {
+function pushLink(event) {
   event.preventDefault();
   let link = input.value;
   let flag = true;
