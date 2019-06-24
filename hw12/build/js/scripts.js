@@ -48,7 +48,7 @@ function pushLink(event) {
 }
 
 function compileHTML(list) {
-  const source = '{{#each links}}<a href="{{this}}">{{this}}</a></br>{{/each}}';
+  const source = '{{#each links}}<p>{{this}}</p>{{/each}}';
   const template = Handlebars.compile(source);
   listLinks.innerHTML = template({
     "links": list
